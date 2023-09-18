@@ -1,0 +1,39 @@
+img {
+    height: 30px;
+}
+
+.drop-down-icon {
+    margin-left: auto;
+}
+
+.education-title {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.education-section-wrapper {
+    align-items: start;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 500px;
+}
+
+.education-list {
+    width: 100%;
+}
+
+.education-list.active {
+    display: block;
+}
+
+.education-list.inactive {
+    display: none;
+}

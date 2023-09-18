@@ -1,34 +1,19 @@
-import '../styles/form.css'
+import { useState } from 'react';
+import EducationForm from './EducationForm';
+import '../styles/education.css'
 
 function Education () {
+    const [isOpen, setOpen] = useState(false);
+
     return (
-        <div>
-            <div className='form-container'>
-                <form action="submit">
-                    <h2>Education</h2>
-                    <div>
-                        <label htmlFor="school">School</label>
-                        <input type="text" id='school' name='school'/>
-                    </div>
-                    <div>
-                        <label htmlFor="degree">Degree</label>
-                        <input type="text" id='degree' name='degree'/>
-                    </div>
-                    <div className="date-inputs">
-                        <div>
-                            <label htmlFor="startDate">Start Date</label>
-                            <input type="date" id='startDate' name='startDate'/>
-                        </div>
-                        <div>
-                            <label htmlFor="endDate">End Date</label>
-                            <input type="date" id='endDate' name='endDate'/>
-                        </div>
-                    </div>
-                    <div>
-                        <label htmlFor="location">Location</label>
-                        <input type="text" id='location' name='location'/>
-                    </div>
-                </form>
+        <div className='education-section-wrapper'>
+            <div className='education-title'>
+                <img src="/school.svg" alt="school icon" />
+                <h2>Education</h2>
+                <img className='drop-down-icon' src="/dropdown.svg" alt="dropdown icon" onClick={()=> setOpen(!isOpen)} />
+            </div>
+            <div className={`education-list ${isOpen ? 'active' : 'inactive'}`}>
+                <EducationForm />
             </div>
         </div>
     )

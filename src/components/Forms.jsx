@@ -1,14 +1,14 @@
 import General from './General.jsx';
 import Education from './Education.jsx';
+import '../styles/formsContainer.css';
 
 function Forms() {
     return (
-        <div>
+        <div className='formsWrapper'>
             <General/>
             <Education />
         </div>
     )
-
 }
 
 export default Forms
