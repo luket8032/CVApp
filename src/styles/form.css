@@ -21,7 +21,7 @@ form {
     width: 100%;
 }
 
-.general-container {
+.form-container {
     align-items: start;
     background-color: white;
     border: none;
@@ -32,4 +32,10 @@ form {
     flex-direction: column;
     padding: 25px;
     width: 500px;
+}
+
+.date-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }

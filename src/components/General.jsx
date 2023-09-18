@@ -1,8 +1,8 @@
-import '../styles/general.css';
+import '../styles/form.css';
 
 function General() {
     return (
-        <div className='general-container'>
+        <div className='form-container'>
             <form action="submit">
                 <h2>General Information</h2>
                 <div>
