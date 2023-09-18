@@ -4,7 +4,7 @@ function General() {
     return (
         <div className='form-container'>
             <form action="submit">
-                <h2>General Information</h2>
+                <h2><img src="/person.svg" alt="person icon" />General Information</h2>
                 <div>
                     <label htmlFor="fullName">Full Name</label>
                     <input type="text" id='fullName' name='fullName'/>

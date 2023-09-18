@@ -13,7 +13,14 @@ input {
     width: 100%;
 }
 
+img {
+    height: 30px;
+}
+
 h2 {
+    align-items: center;
+    display: flex;
+    gap: 15px;
     margin: 0px;
 }
 
