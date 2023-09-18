@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import EducationForm from './EducationForm';
-import '../styles/education.css'
+import '../styles/dropdown.css'
 
 function Education () {
     const [isOpen, setOpen] = useState(false);
 
     return (
-        <div className='education-section-wrapper'>
-            <div className='education-title'>
+        <div className='dropdown-section-wrapper'>
+            <div className='dropdown-title'>
                 <img src="/school.svg" alt="school icon" />
                 <h2>Education</h2>
-                <img className='drop-down-icon' src="/dropdown.svg" alt="dropdown icon" onClick={()=> setOpen(!isOpen)} />
+                <img className='dropdown-icon' src="/dropdown.svg" alt="dropdown icon" onClick={()=> setOpen(!isOpen)} />
             </div>
-            <div className={`education-list ${isOpen ? 'active' : 'inactive'}`}>
+            <div className={`dropdown-list ${isOpen ? 'active' : 'inactive'}`}>
                 <EducationForm />
             </div>
         </div>

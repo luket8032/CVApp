@@ -2,18 +2,18 @@ img {
     height: 30px;
 }
 
-.drop-down-icon {
+.dropdown-icon {
     margin-left: auto;
 }
 
-.education-title {
+.dropdown-title {
     align-items: center;
     display: flex;
     gap: 15px;
     width: 100%;
 }
 
-.education-section-wrapper {
+.dropdown-section-wrapper {
     align-items: start;
     background-color: white;
     border: none;
@@ -27,14 +27,14 @@ img {
     width: 500px;
 }
 
-.education-list {
+.dropdown-list {
     width: 100%;
 }
 
-.education-list.active {
+.dropdown-list.active {
     display: block;
 }
 
-.education-list.inactive {
+.dropdown-list.inactive {
     display: none;
 }
