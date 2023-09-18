@@ -1,16 +1,16 @@
 import FormButtons from './FormButtons';
 import '../styles/form.css'
 
-function EducationForm () {
+function ExperienceForm () {
     return (
         <form>
                 <div>
-                    <label htmlFor="school">School</label>
-                    <input type="text" id='school' name='school'/>
+                    <label htmlFor="companyName">Company name</label>
+                    <input type="text" id='companyName' name='companyName'/>
                 </div>
                 <div>
-                    <label htmlFor="degree">Degree</label>
-                    <input type="text" id='degree' name='degree'/>
+                    <label htmlFor="positionTitle">Postition title</label>
+                    <input type="text" id='positionTitle' name='positionTitle'/>
                 </div>
                 <div className="date-inputs">
                     <div>
@@ -26,9 +26,13 @@ function EducationForm () {
                     <label htmlFor="location">Location</label>
                     <input type="text" id='location' name='location'/>
                 </div>
+                <div>
+                    <label htmlFor="description">Description</label>
+                    <input type="text" id='description' name='description'/>
+                </div>
                 <FormButtons />
             </form>
     )
 }
 
-export default EducationForm;
+export default ExperienceForm;

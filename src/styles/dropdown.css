@@ -22,6 +22,7 @@ img {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    gap: 15px;
     padding: 25px;
     width: 500px;
 }

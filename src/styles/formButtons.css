@@ -1,0 +1,25 @@
+button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    padding: 5px 0px;
+    width: 100%;
+}
+
+.buttons-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    gap: 25px;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.save-btn {
+    background-color: green;
+}
+
+.delete-btn {
+    background-color: red;
+}
