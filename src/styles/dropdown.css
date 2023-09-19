@@ -49,7 +49,6 @@ button:hover {
 
 .education-btn {
     background-color: blue;
-    margin-top: 15px;
 }
 
 .education-btn.active {
@@ -58,4 +57,20 @@ button:hover {
 
 .education-btn.inactive {
     display: none;
+}
+
+.experience-btn {
+    background-color: blue;
+}
+
+.experience-btn.active {
+    display: block;
+}
+
+.experience-btn.inactive {
+    display: none;
+}
+
+.dropdown-section-wrapper form {
+    margin-bottom: 25px;
 }
