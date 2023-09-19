@@ -38,3 +38,24 @@ img {
 .dropdown-list.inactive {
     display: none;
 }
+/* Add button styles */
+button {
+    transition: .1s;
+}
+
+button:hover {
+    scale: 1.02;
+}
+
+.education-btn {
+    background-color: blue;
+    margin-top: 15px;
+}
+
+.education-btn.active {
+    display: block;
+}
+
+.education-btn.inactive {
+    display: none;
+}
