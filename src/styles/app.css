@@ -6,6 +6,14 @@
     padding: 0px;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f4f6;
+}
+
 main {
     box-sizing: border-box;
     display: flex;

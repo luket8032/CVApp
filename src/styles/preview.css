@@ -5,3 +5,14 @@
     width: 21cm;
     height: 29.7cm;
 }
+
+/* General Styles */
+.general-section {
+    text-align: center;
+}
+
+.general-info {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
