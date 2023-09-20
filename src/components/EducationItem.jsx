@@ -1,5 +1,3 @@
-
-
 function EducationItem({school, degree, startDate, endDate, location}) {
     return (
         <div className="education-item-wrapper">

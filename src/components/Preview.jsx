@@ -1,7 +1,8 @@
 import EducationItem from './EducationItem.jsx';
+import ExperienceItem from './ExperienceItem.jsx';
 import '../styles/preview.css'
 
-function Preview({generalVals, educationItems}) {
+function Preview({generalVals, educationItems, experienceItems}) {
     return (
         <div className="preview-wrapper">
             <div className="general-section">
@@ -28,6 +29,15 @@ function Preview({generalVals, educationItems}) {
 
             <div className="experience-section">
                 <h2>Experience</h2>
+                {experienceItems.map(item => <ExperienceItem
+                key={item.id}
+                companyName={item.values.companyName}
+                positionTitle={item.values.positionTitle}
+                startDate={item.values.startDate}
+                endDate={item.values.endDate}
+                location={item.values.location}
+                description={item.values.description}
+                />)}
             </div>
         </div>
     )

@@ -8,6 +8,7 @@ import '../styles/formsContainer.css';
 function Forms() {
     const [generalVals, setGeneralVals] = useState({})
     const [educationItems, setEducationItems] = useState([]);
+    const [experienceItems, setexperienceItems] = useState([]);
 
     function changeGeneral(generalData) {
         setGeneralVals(generalData);
@@ -31,15 +32,35 @@ function Forms() {
         setEducationItems(updatedEducationItems)
     }
 
+    function addExperienceItem(experienceItems) {
+        setexperienceItems(experienceItems);
+    }
+
+    function updateExperienceItem(values){
+        const updatedExperienceItems = experienceItems.map(item => {
+            if(item.id === values.id) {
+                item.values.companyName = values.companyName;
+                item.values.position = values.position;
+                item.values.startDate = values.startDate;
+                item.values.endDate = values.endDate;
+                item.values.location = values.location;
+                item.values.description = values.description;
+            }
+            return item;
+        });
+        console.log(experienceItems)
+        setexperienceItems(updatedExperienceItems);
+    }
+
     return (
         <>
         <div className='formsWrapper'>
             <General onChange={changeGeneral} />
             <Education onAdd={addEducationItem} onUpdate={updateEducationItem}/>
-            <Experience />
+            <Experience onAdd={addExperienceItem} onUpdate={updateExperienceItem} />
         </div>
         <div className="preview-wrapper">
-            <Preview generalVals={generalVals} educationItems={educationItems}/>
+            <Preview generalVals={generalVals} educationItems={educationItems} experienceItems={experienceItems}/>
         </div>
         </>
     )

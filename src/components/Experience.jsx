@@ -2,14 +2,30 @@ import { useState } from 'react';
 import ExperienceForm from './ExperienceForm';
 import '../styles/dropdown.css'
 
-function Education () {
+function Education ({onAdd, onUpdate}) {
     const [isOpen, setOpen] = useState(false);
     const [keyCount, setKeyCount] = useState(0)
     const [experienceList, setExperienceList] = useState([])
 
-    function addExperience() {
+    function addExperienceForm() {
         setKeyCount(prevKey => prevKey + 1);
-        setExperienceList([...experienceList, {id: keyCount}]);
+        const newItem = {
+            id: keyCount,
+            values: {
+                companyName: '',
+                positionTitle: '',
+                startDate: '',
+                endDate: '',
+                location: '',
+                description: ''
+            }
+        }
+        setExperienceList([...experienceList, newItem]);
+        onAdd([...experienceList, newItem]);
+    }
+
+    function updateExperienceItem(values) {
+        onUpdate(values);
     }
 
     return (
@@ -20,9 +36,9 @@ function Education () {
                 <img className='dropdown-icon' src="/dropdown.svg" alt="dropdown icon" onClick={()=> setOpen(!isOpen)} />
             </div>
             <div className={`dropdown-list ${isOpen ? 'active' : 'inactive'}`}>
-                {experienceList.map(item => <ExperienceForm key={item.id}/>)}
+                {experienceList.map(item => <ExperienceForm key={item.id} id={item.id} onSave={updateExperienceItem}/>)}
             </div>
-            <button className={`experience-btn ${isOpen ? 'active' : 'inactive'}`} onClick={addExperience}>Add experience</button>
+            <button className={`experience-btn ${isOpen ? 'active' : 'inactive'}`} onClick={addExperienceForm}>Add experience</button>
         </div>
     )
 }
