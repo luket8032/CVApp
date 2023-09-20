@@ -1,3 +1,7 @@
+h1, p {
+    font-family: serif;
+}
+
 .preview-wrapper {
     background-color: white;
     border: none;
@@ -8,6 +12,8 @@
 
 /* General Styles */
 .general-section {
+    box-sizing: border-box;
+    padding: 25px;
     text-align: center;
 }
 
@@ -15,4 +21,5 @@
     display: flex;
     gap: 25px;
     justify-content: center;
+    margin: 10px;
 }

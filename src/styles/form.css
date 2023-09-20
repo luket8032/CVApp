@@ -1,5 +1,11 @@
 button {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    padding: 5px;
     transition: .1s;
+    width: 100%;
 }
 
 button:hover {
@@ -53,4 +59,21 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    gap: 25px;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.save-btn {
+    background-color: green;
+}
+
+.delete-btn {
+    background-color: red;
 }

@@ -1,6 +1,7 @@
+import EducationItem from './EducationItem.jsx';
 import '../styles/preview.css'
 
-function Preview({generalVals}) {
+function Preview({generalVals, educationItems}) {
     return (
         <div className="preview-wrapper">
             <div className="general-section">
@@ -10,6 +11,15 @@ function Preview({generalVals}) {
                     <p>{generalVals.phoneNumber}</p>
                     <p>{generalVals.address}</p>
                 </div>
+                <hr />
+            </div>
+
+            <div className="education-section">
+                {educationItems.map(item => <EducationItem key={item.id}/>)}
+            </div>
+
+            <div className="experience-section">
+
             </div>
         </div>
     )

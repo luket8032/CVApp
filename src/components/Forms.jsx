@@ -7,20 +7,25 @@ import '../styles/formsContainer.css';
 
 function Forms() {
     const [generalVals, setGeneralVals] = useState({})
+    const [educationItems, setEducationItems] = useState([]);
+
     function changeGeneral(generalData) {
-        //something
         setGeneralVals(generalData);
+    }
+    
+    function changeEducation(newItemID, educationVals) {
+        setEducationItems([...educationItems, {id: newItemID, data: educationVals}]);
     }
 
     return (
         <>
         <div className='formsWrapper'>
             <General onChange={changeGeneral} />
-            <Education />
+            <Education onAdd={changeEducation} />
             <Experience />
         </div>
         <div className="preview-wrapper">
-            <Preview generalVals={generalVals}/>
+            <Preview generalVals={generalVals} educationItems={educationItems}/>
         </div>
         </>
     )

@@ -1,4 +1,3 @@
-import FormButtons from './FormButtons';
 import '../styles/form.css'
 
 function ExperienceForm () {
@@ -30,7 +29,10 @@ function ExperienceForm () {
                     <label htmlFor="description">Description</label>
                     <input type="text" id='description' name='description'/>
                 </div>
-                <FormButtons />
+                <div className="buttons-wrapper">
+                    <button className='save-btn'>Save</button>
+                    <button className='delete-btn'>Delete</button>
+                </div>
             </form>
     )
 }

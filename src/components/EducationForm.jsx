@@ -1,7 +1,24 @@
-import FormButtons from './FormButtons';
 import '../styles/form.css'
 
-function EducationForm () {
+function EducationForm ({onSave}) {
+    function sendData() {
+        const school = document.getElementById('school').value;
+        const degree = document.getElementById('sdegreechool').value;
+        const startDate = document.getElementById('startDate').value;
+        const endDate = document.getElementById('endDate').value;
+        const location = document.getElementById('location').value;
+
+        const educationData = {
+            school: school,
+            degree: degree,
+            startDate: startDate,
+            endDate: endDate,
+            location: location
+        }
+        
+        onSave(educationData);
+    }
+
     return (
         <form>
             <div>
@@ -26,7 +43,10 @@ function EducationForm () {
                 <label htmlFor="location">Location</label>
                 <input type="text" id='location' name='location'/>
             </div>
-            <FormButtons />
+            <div className="buttons-wrapper">
+                <button className='save-btn' onClick={sendData}>Save</button>
+                <button className='delete-btn'>Delete</button>
+            </div>
         </form>
     )
 }

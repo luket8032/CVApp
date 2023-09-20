@@ -2,7 +2,7 @@ import { useState } from 'react';
 import EducationForm from './EducationForm';
 import '../styles/dropdown.css'
 
-function Education () {
+function Education ({onAdd}) {
     const [isOpen, setOpen] = useState(false);
     const [keyCount, setKeyCount] = useState(0)
     const [educationList, setEducationList] = useState([])
@@ -10,6 +10,11 @@ function Education () {
     function addEducation() {
         setKeyCount(prevKey => prevKey + 1);
         setEducationList([...educationList, {id: keyCount}]);
+        onAdd(keyCount);
+    }
+
+    function setEducationVals(key) {
+        
     }
 
     return (
