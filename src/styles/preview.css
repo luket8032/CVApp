@@ -1,6 +1,8 @@
 h1, p {
-    font-family: serif;
+    font-family: sans-serif;
 }
+
+
 
 .preview-wrapper {
     background-color: white;
@@ -13,7 +15,9 @@ h1, p {
 /* General Styles */
 .general-section {
     box-sizing: border-box;
-    padding: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
     text-align: center;
 }
 
@@ -22,4 +26,24 @@ h1, p {
     gap: 25px;
     justify-content: center;
     margin: 10px;
+}
+
+.general-info img {
+    height: 1.5em;
+}
+
+.general-info p {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+/* Education styles */
+.education-section {
+    padding: 25px;
+}
+
+/* Experience styles */
+.experience-section {
+    padding: 25px;
 }

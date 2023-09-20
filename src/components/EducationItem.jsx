@@ -1,11 +1,11 @@
-function EducationItem() {
+function EducationItem({id, school, degree, startDate, endDate, location}) {
     return (
         <div className="education-item-wrapper">
-            <p>school</p>
-            <p>degree</p>
-            <p>startdate</p>
-            <p>enddate</p>
-            <p>location</p>
+            <p>{school}</p>
+            <p>{degree}</p>
+            <p>{startDate}</p>
+            <p>{endDate}</p>
+            <p>{location}</p>
         </div>
     )
 }

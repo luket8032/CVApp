@@ -1,47 +1,49 @@
+import { useState } from 'react';
 import '../styles/form.css'
 
-function EducationForm ({onSave}) {
-    function sendData() {
-        const school = document.getElementById('school').value;
-        const degree = document.getElementById('sdegreechool').value;
-        const startDate = document.getElementById('startDate').value;
-        const endDate = document.getElementById('endDate').value;
-        const location = document.getElementById('location').value;
+function EducationForm ({onSave, id}) {
+    const [educationData, setEducationData] = useState({
+        school: '',
+        degree: '',
+        startDate: '',
+        endDate: '',
+        location: ''
+    });
 
-        const educationData = {
-            school: school,
-            degree: degree,
-            startDate: startDate,
-            endDate: endDate,
-            location: location
-        }
-        
-        onSave(educationData);
+    function handleChange(event) {
+        const { name, value } = event.target;
+        setEducationData(prevData => ({...prevData, [name]: value}));
+    }
+    
+    function sendData(event) {
+        event.preventDefault();
+        const educationDataWithId = {...educationData, id: id}
+        onSave(educationDataWithId);
     }
 
     return (
         <form>
             <div>
                 <label htmlFor="school">School</label>
-                <input type="text" id='school' name='school'/>
+                <input type="text" id='school' name='school' value={educationData.school} onChange={handleChange}/>
             </div>
             <div>
                 <label htmlFor="degree">Degree</label>
-                <input type="text" id='degree' name='degree'/>
+                <input type="text" id='degree' name='degree' value={educationData.degree} onChange={handleChange}/>
             </div>
             <div className="date-inputs">
                 <div>
                     <label htmlFor="startDate">Start Date</label>
-                    <input type="date" id='startDate' name='startDate'/>
+                    <input type="date" id='startDate' name='startDate' value={educationData.startDate} onChange={handleChange}/>
                 </div>
                 <div>
                     <label htmlFor="endDate">End Date</label>
-                    <input type="date" id='endDate' name='endDate'/>
+                    <input type="date" id='endDate' name='endDate' value={educationData.endDate} onChange={handleChange}/>
                 </div>
             </div>
             <div>
                 <label htmlFor="location">Location</label>
-                <input type="text" id='location' name='location'/>
+                <input type="text" id='location' name='location' value={educationData.location} onChange={handleChange}/>
             </div>
             <div className="buttons-wrapper">
                 <button className='save-btn' onClick={sendData}>Save</button>

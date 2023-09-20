@@ -12,16 +12,31 @@ function Forms() {
     function changeGeneral(generalData) {
         setGeneralVals(generalData);
     }
+
+    function addEducationItem(educationList) {
+        setEducationItems(educationList);
+    }
     
-    function changeEducation(newItemID, educationVals) {
-        setEducationItems([...educationItems, {id: newItemID, data: educationVals}]);
+    function updateEducationItem(values){
+        const updatedEducationItems = educationItems.map(item => {
+            if(item.id === values.id) {
+                item.values.school = values.school;
+                item.values.degree = values.degree;
+                item.values.startDate = values.startDate;
+                item.values.endDate = values.endDate;
+                item.values.location = values.location;
+                console.log(item)
+            }
+            return item;
+        });
+        setEducationItems(updatedEducationItems)
     }
 
     return (
         <>
         <div className='formsWrapper'>
             <General onChange={changeGeneral} />
-            <Education onAdd={changeEducation} />
+            <Education onAdd={addEducationItem} onUpdate={updateEducationItem}/>
             <Experience />
         </div>
         <div className="preview-wrapper">
