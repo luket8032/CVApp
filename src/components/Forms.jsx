@@ -25,7 +25,6 @@ function Forms() {
                 item.values.startDate = values.startDate;
                 item.values.endDate = values.endDate;
                 item.values.location = values.location;
-                console.log(item)
             }
             return item;
         });

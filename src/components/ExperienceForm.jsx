@@ -27,7 +27,7 @@ function ExperienceForm () {
                 </div>
                 <div>
                     <label htmlFor="description">Description</label>
-                    <input type="text" id='description' name='description'/>
+                    <textarea id='description' name='description'/>
                 </div>
                 <div className="buttons-wrapper">
                     <button className='save-btn'>Save</button>

@@ -18,7 +18,6 @@ function Preview({generalVals, educationItems}) {
                 <h2>Education</h2>
                 {educationItems.map(item => <EducationItem 
                 key={item.id}
-                id={item.id}
                 school={item.values.school}
                 degree={item.values.degree}
                 startDate={item.values.startDate}

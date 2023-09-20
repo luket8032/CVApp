@@ -42,6 +42,17 @@ form {
     width: 100%;
 }
 
+textarea {
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 125px;
+    padding: 8px;
+    resize: none;
+    width: 100%;
+}
+
 .form-container {
     align-items: start;
     background-color: white;
