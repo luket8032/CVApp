@@ -56,12 +56,17 @@ function Forms() {
         setEducationItems(updatedEducationItems)
     }
 
+    function deleteExperienceItem(id) {
+        const updatedExperienceItems = experienceItems.filter(item => item.id !== id);
+        setexperienceItems(updatedExperienceItems);
+    }
+
     return (
         <>
         <div className='formsWrapper'>
             <General onChange={changeGeneral} />
             <Education onAdd={addEducationItem} onUpdate={updateEducationItem} onDelete={deleteEducationItem}/>
-            <Experience onAdd={addExperienceItem} onUpdate={updateExperienceItem} />
+            <Experience onAdd={addExperienceItem} onUpdate={updateExperienceItem} onDelete={deleteExperienceItem}/>
         </div>
         <div className="preview-wrapper">
             <Preview generalVals={generalVals} educationItems={educationItems} experienceItems={experienceItems}/>

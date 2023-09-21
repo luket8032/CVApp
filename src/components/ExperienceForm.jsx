@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/form.css'
 
-function ExperienceForm ({onSave, id}) {
+function ExperienceForm ({onSave, onDelete, id}) {
     const [experienceData, setExperienceData] = useState({
         companyName: '',
         positionTitle: '',
@@ -20,6 +20,11 @@ function ExperienceForm ({onSave, id}) {
         event.preventDefault();
         const experienceDataWithId = {...experienceData, id: id}
         onSave(experienceDataWithId);
+    }
+
+    function deleteExperience(event) {
+        event.preventDefault();
+        onDelete(id);
     }
 
     return (
@@ -52,7 +57,7 @@ function ExperienceForm ({onSave, id}) {
                 </div>
                 <div className="buttons-wrapper">
                     <button className='save-btn' onClick={sendData}>Save</button>
-                    <button className='delete-btn'>Delete</button>
+                    <button className='delete-btn' onClick={deleteExperience}>Delete</button>
                 </div>
             </form>
     )
