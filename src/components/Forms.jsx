@@ -2,13 +2,20 @@ import General from './General.jsx';
 import Education from './Education.jsx';
 import Experience from './Experience.jsx'
 import Preview from './Preview.jsx';
-import { useState } from 'react';
+import Print from './Print.jsx';
+import { useReactToPrint } from 'react-to-print';
+import { useState, useRef } from 'react';
 import '../styles/formsContainer.css';
 
 function Forms() {
+    const componentRef = useRef();
     const [generalVals, setGeneralVals] = useState({})
     const [educationItems, setEducationItems] = useState([]);
     const [experienceItems, setexperienceItems] = useState([]);
+
+    const handlePrint = useReactToPrint({
+        content: () => componentRef.current,
+    });
 
     function changeGeneral(generalData) {
         setGeneralVals(generalData);
@@ -67,8 +74,9 @@ function Forms() {
             <General onChange={changeGeneral} />
             <Education onAdd={addEducationItem} onUpdate={updateEducationItem} onDelete={deleteEducationItem}/>
             <Experience onAdd={addExperienceItem} onUpdate={updateExperienceItem} onDelete={deleteExperienceItem}/>
+            <Print onPrint={handlePrint}/>
         </div>
-        <div className="preview-wrapper">
+        <div className="preview-wrapper" ref={componentRef}>
             <Preview generalVals={generalVals} educationItems={educationItems} experienceItems={experienceItems}/>
         </div>
         </>

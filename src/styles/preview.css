@@ -1,9 +1,15 @@
+@page {
+    size: A4; /* Adjust the page size as needed (A4, Letter, etc.) */
+    margin: 0; /* Remove default margins */
+}
+
 .preview-wrapper {
     background-color: white;
     border: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 21cm;
-    height: 29.7cm;
+    min-width: 21cm;
+    min-height: 29.7cm;
+    page-break-before: auto;
 }
 
 /* General Styles */
@@ -34,6 +40,7 @@
 
 /* Summary Styles */
 .summary-section {
+    box-sizing: border-box;
     padding: 25px;
 }
 
@@ -49,6 +56,7 @@
 }
 
 .education-section {
+    box-sizing: border-box;
     padding: 25px;
 }
 
@@ -63,6 +71,7 @@
 }
 
 .experience-section {
+    box-sizing: border-box;
     padding: 25px;
 }
 
