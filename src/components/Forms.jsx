@@ -48,7 +48,6 @@ function Forms() {
             }
             return item;
         });
-        console.log(experienceItems)
         setexperienceItems(updatedExperienceItems);
     }
 

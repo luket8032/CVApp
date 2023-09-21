@@ -28,6 +28,8 @@ function Education ({onAdd, onUpdate, onDelete}) {
     }
 
     function deleteEducation(id) {
+        const updatedEducationList = educationList.filter(item => item.id !== id);
+        setEducationList(updatedEducationList);
         onDelete(id);
     }
 
