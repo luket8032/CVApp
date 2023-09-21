@@ -40,7 +40,7 @@ function Forms() {
         const updatedExperienceItems = experienceItems.map(item => {
             if(item.id === values.id) {
                 item.values.companyName = values.companyName;
-                item.values.position = values.position;
+                item.values.positionTitle = values.positionTitle;
                 item.values.startDate = values.startDate;
                 item.values.endDate = values.endDate;
                 item.values.location = values.location;

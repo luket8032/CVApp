@@ -12,11 +12,11 @@ function Preview({generalVals, educationItems, experienceItems}) {
                     <p><img src="/phone.svg" alt="phone icon" />{generalVals.phoneNumber}</p>
                     <p><img src="/address.svg" alt="address icon" />{generalVals.address}</p>
                 </div>
-                <hr />
             </div>
 
             <div className="education-section">
                 <h2>Education</h2>
+                <hr />
                 {educationItems.map(item => <EducationItem 
                 key={item.id}
                 school={item.values.school}
@@ -29,6 +29,7 @@ function Preview({generalVals, educationItems, experienceItems}) {
 
             <div className="experience-section">
                 <h2>Experience</h2>
+                <hr />
                 {experienceItems.map(item => <ExperienceItem
                 key={item.id}
                 companyName={item.values.companyName}

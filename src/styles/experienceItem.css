@@ -8,3 +8,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.title {
+    font-weight: 500;
+    font-style: italic;
+}
