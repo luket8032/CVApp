@@ -88,3 +88,20 @@ textarea {
 .delete-btn {
     background-color: red;
 }
+
+/* General Form Styles */
+.title {
+    display: flex;
+}
+
+.title h2 {
+    font-style: normal;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.form-section.inactive {
+    display: none;
+}
