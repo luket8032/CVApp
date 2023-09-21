@@ -9,12 +9,14 @@ function General({onChange}) {
         const email = document.getElementById('email').value;
         const phoneNumber = document.getElementById('phoneNumber').value;
         const address = document.getElementById('address').value;
+        const summary = document.getElementById('summary').value;
 
         const generalData = {
             name: name,
             email: email,
             phoneNumber: phoneNumber,
-            address: address
+            address: address,
+            summary: summary
         }
 
         onChange(generalData);
@@ -43,6 +45,10 @@ function General({onChange}) {
                     <div>
                         <label htmlFor="address">Address</label>
                         <input type="text" id='address' name='address' onChange={handleChange}/>
+                    </div>
+                    <div>
+                        <label htmlFor="summary">Summary</label>
+                        <textarea id='summary' name='summary' onChange={handleChange}/>
                     </div>
                 </div>
             </form>

@@ -14,6 +14,12 @@ function Preview({generalVals, educationItems, experienceItems}) {
                 </div>
             </div>
 
+            <div className="summary-section">
+                <h2>Summary</h2>
+                <hr />
+                <p>{generalVals.summary}</p>
+            </div>
+
             <div className="education-section">
                 <h2>Education</h2>
                 <hr />

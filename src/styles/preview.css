@@ -32,6 +32,17 @@
     gap: 5px;
 }
 
+/* Summary Styles */
+.summary-section {
+    padding: 25px;
+}
+
+.summary-section h2 {
+    margin: 0px auto;
+    width: fit-content;
+}
+
+
 /* Education styles */
 .education-item-wrapper {
     margin-top: 15px;
