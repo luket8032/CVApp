@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/form.css'
 
-function EducationForm ({onSave, id}) {
+function EducationForm ({onSave, onDelete, id}) {
     const [educationData, setEducationData] = useState({
         school: '',
         degree: '',
@@ -19,6 +19,11 @@ function EducationForm ({onSave, id}) {
         event.preventDefault();
         const educationDataWithId = {...educationData, id: id}
         onSave(educationDataWithId);
+    }
+
+    function deleteEducation(event) {
+        event.preventDefault();
+        onDelete(id);
     }
 
     return (
@@ -47,7 +52,7 @@ function EducationForm ({onSave, id}) {
             </div>
             <div className="buttons-wrapper">
                 <button className='save-btn' onClick={sendData}>Save</button>
-                <button className='delete-btn'>Delete</button>
+                <button className='delete-btn' onClick={deleteEducation}>Delete</button>
             </div>
         </form>
     )
